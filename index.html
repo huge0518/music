@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./icons/favicon.png" type="image/x-icon" />
+    <title>音乐时代</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/songSheet.css">
+    <link rel="stylesheet" href="./css/RankingList.css">
+</head>
+
+<body>
+    <audio id="audio" src=""></audio>
+    <div class="musicTime">
+        <header>
+            <div class="system-nav"></div>
+            <div class="nav clearfix">
+                <span class="user fl"><img class="auto-img" src="./icons/user.png" alt=""></span>
+                <span>音乐时代</span>
+                <span class="search fr"><img class="auto-img" src="./icons/search.png" alt=""></span>
+            </div>
+            <div class="clearfix child-list">
+                <span class="active" data-module="recommend">推荐</span>
+                <span data-module="songSheet">歌单</span>
+                <span data-module="RankingList">排行</span>
+                <span data-module="MVList">MV</span>
+                <span data-module="radioStation">电台</span>
+            </div>
+        </header>
+
+        <!-- 主体内容 -->
+        <div class="main-content">
+
+            <!-- 推荐 -->
+            <div class="main recommend">
+                <div class="recommend-banner">
+                    <img class="auto-img" src="./img/banner.jpg" alt="">
+                </div>
+
+                <!-- 推荐歌单 -->
+                <div class="recommend-sheet">
+                    <div class="sheet-text">
+                        <div class="sheet-title fl">
+                            <span>推荐歌单</span>
+                        </div>
+                        <span class="sheet-more fr">更多歌单>></span>
+                    </div>
+                    <div class="recommend-info clearfix">
+                    </div>
+                </div>
+
+
+                <!-- 推荐新歌 -->
+                <div class="recommend-newsong">
+                    <div class="newsong-text clearfix">
+                        <div class="newsong-title fl">
+                            <span>新歌推荐</span>
+                        </div>
+                    </div>
+                    <div class="recommend-newsong-info">
+
+                        <!-- <div class="newsongs-list-item" data-id="${v.id}" data-play='0'>
+                            <div class="newsongs-img">
+                                <img class="auto-img" src="${v.song.album.blurPicUrl}" />
+                            </div>
+                            <div class="newsongs-info">
+                                <div class="t1 one-text1 newsong-name">${v.name}</div>
+                                <div class="t2 one-text1 newsinger-name">${v.song.artists[0].name}</div>
+                            </div>
+                            <div class="newsongs-time">${formatTime(v.song.hMusic.playTime)}</div>
+                            <div class="playmusic">
+                               <img src="./icons/play3.png" alt="">
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- 歌单 -->
+            <div class="main songSheet">
+                <div class="Sheetlist-title">
+                    <span>精选歌单>></span>
+                </div>
+                <div class="songSheet-info clearfix">
+                </div>
+            </div>
+
+            <!-- 歌单详情页 -->
+            <div class="details">
+                <div class="details-title">
+                    <span>歌单详情>></span>
+                </div>
+                <div class="sheet-details">
+                    <div class="top-box clearfix">
+                        <div class="sheet-img fl">
+                            <img class="auto-img" src="./img/1.jpg" alt="">
+                        </div>
+                        <div class="sheet-text fr">
+                            <p class="sheet-name">
+                                我猜你一定有个爱而不得的人吧
+                            </p>
+                            <p class="sheet-description">
+                                冬日的来临唤醒了一切温暖的记忆想立即拆开一袋刚刚出炉的糖炒栗子↵冬日的来临唤醒了一切温暖的记忆想立即拆开一袋刚刚出炉的糖炒栗子
+                            </p>
+                        </div>
+                    </div>
+                    <div class="detailssong-info">
+ 
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- 排行 -->
+            <div class="main RankingList">
+                排行
+            </div>
+
+            <!-- MV -->
+
+
+            <!-- 电台 -->
+
+
+        </div>
+
+        <!-- 底部 -->
+        <div class="controls-box">
+            <!-- 进度条 -->
+            <!-- <div class="progress-box">
+              <div class="clearfix audio-time">
+                <span class="fl">00:00</span>
+                <span class="fr">05:00</span>
+              </div>
+              <div class="progress">
+                <div class="active-progress"></div>
+                <div class="mask"></div>
+                <div class="layer"></div>
+              </div>
+            </div> -->
+
+            <!-- 底部 -->
+            <div class="controls" name="0">
+                <div class="fl clearfix controls-img">
+                    <div class="singer-avatar fl">
+                        <img class="auto-img" src="./img/1.jpg" alt="" />
+                    </div>
+                    <div class="fl singer-info">
+                        <p class="song-name one-text">音乐时代</p>
+                        <p class="singer one-text">走近音乐</p>
+                    </div>
+                </div>
+
+                <div class="fr clearfix controls-icons">
+                    <span class="list-menu"></span>
+                    <span class="play" data-sign='0'></span>
+                    <span></span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="wait">
+        <div class="points-box clearfix">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+
+    <script src="./js/jquery-3.4.1.js"></script>
+    <script src="./js/rem.js"></script>
+    <script src="./js/utils.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/songSheet.js"></script>
+</body>
+
+</html>
